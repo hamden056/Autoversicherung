@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif !important;
+
+}
+
+nav{
+  background-color: #203d6b !important;
+}
+.menu a img{
+  width: 10%;
+}
+.banner{
+ cursor: auto !important;
+ background-color: #025cd1 !important;
+  padding-bottom: 20px !important;
+}
+.banner h1{
+  font-weight: bold;
+  color: #203d6b;
+}
+.banner p{
+  color: #585b5f;
+}
+.card img{
+  width: 50%;
+}
+.title{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.title span{
+  font-size: 16px !important;
+  color: rgb(147, 149, 150);
+}
+.top-btn{
+  border: 1px solid orange !important;
+  padding: 15px 22px;
+  border-radius: 10px;
+  margin-right: 30px;
+  background-color: transparent;
+  transition: .3s ease;
+}
+.top-btn:hover{
+  background-color: orange;
+  color: white;
+}
+.top-btn2{
+  background-color: #f0906a;
+  color: white;
+  font-weight: bold;
+  border: none !important;
+}
+
+.top-btn2:hover{
+  background-color: rgb(79, 79, 229);
+  border: none !important;
+}
+.bg {
+  background-color: #f0906a !important;
+}
+.sm-title{
+  padding-top: 29px;
+}
+.link{
+  color: orange;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+@media (max-width: 525.98px) {
+  .menu a img{
+    width: 50%;
+  }
+  .topbtn{
+    display: flex;
+    justify-content: space-between;
+  }
+  .top-btn{
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+}

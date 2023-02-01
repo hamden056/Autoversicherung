@@ -1,0 +1,50 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { Step1Component } from './Components/step1/step1.component';
+import { Step3Component } from './Components/step3/step3.component';
+import { Step4Component } from './Components/step4/step4.component';
+import { Step5Component } from './Components/step5/step5.component';
+import { Step6Component } from './Components/step6/step6.component';
+import { Step7Component } from './Components/step7/step7.component';
+import { Step8Component } from './Components/step8/step8.component';
+import { Step2Component } from './Components/step2/step2.component';
+import { VolkasoComponent } from './Components/volkaso/volkaso.component';
+import { FormsModule } from '@angular/forms';
+import { Product1Component } from './Components/product1/product1.component';
+import { Product2Component } from './Components/product2/product2.component';
+import { Product3Component } from './Components/product3/product3.component';
+import { Step9Component } from './Components/step9/step9.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    Step1Component,
+
+    Step3Component,
+    Step4Component,
+    Step5Component,
+    Step6Component,
+    Step7Component,
+    Step8Component,
+    Step2Component,
+    VolkasoComponent,
+    Product1Component,
+    Product2Component,
+    Product3Component,
+    Step9Component,
+ 
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule  ,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

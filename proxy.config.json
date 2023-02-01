@@ -1,0 +1,12 @@
+{
+  "/hs/": {
+    "target": "https://hs-dev.zeuss.live",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+
+    "headers": {
+      "apikey":  "6c97c113-6328-44bc-8a70-4e3f06010188"
+    }
+  }
+}

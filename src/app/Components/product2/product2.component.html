@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product2.component.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/51b7a6e7c5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid menu">
+          <a class="navbar-brand" href="#"><img class="img-fluid" src="./Unbenannt-3.png" alt=""></a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="card shadow p-3 mb-5 bg-body rounded banner pt-5 mt-5">
+                    <h1>Willkomen</h1>
+                    <p>Schön, dass Sie da sind. <br>
+                    Schön, dass du da bist, wir helfen dir bei der <br>
+                    Gestaltung deiner HappySurance-Versicherung.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-5">
+                <h4 class="text-center main py-5">Wie ist dein Fahrzeug aktuell versichert ? </h4>
+                <div class="topbtn text-center pb-5">
+                    <button class=" top-btn" [routerLink]="['step1']">Haftpflicht</button>  
+                <button class="top-btn"[routerLink]="['/step1']">Teilkasko</button>
+                <button class="top-btn"   [routerLink]="['/step1/volkasko']">Volkasko</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6">
+                <h5>Wie hoch ist deine Selbstbetilingung bei der Vollkasko?</h5>
+                <div class="inp d-flex mt-3">
+                    <button  style="width: 100px;" class="form-control shadow-none"[routerLink]="['/product1']">300€</button>
+                <button  style="width: 100px;" class="form-control shadow-none"  [routerLink]="['/product2']">500€</button>
+                <button placeholder="1000€" style="width: 100px;" class="form-control shadow-none" type="button" [routerLink]="['/product3']">1000€</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+
+    <section class="cbody">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <div class="title mb-5">
+                                <p>Glückspilz</p>
+                                <h1>9€ <span>/Monat</span></h1>
+                            </div>
+                           <p>Was ist enthalten?</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>600€ im Jahr</p> 
+                           <p><i class="fa-solid fa-check  mx-2"></i> 300€ pro Schaden</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2x Schäden im Jahr</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <div class="title mb-5">
+                                <p>Glückspilz</p>
+                                <h1>12€ <span>/Monat</span></h1>
+                            </div>
+                           <p>Was ist enthalten?</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>1000€ im Jahr</p> 
+                           <p><i class="fa-solid fa-check  mx-2"></i> 500€ pro Schaden</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2x Schäden im Jahr</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <div class="title mb-5">
+                                <p>Glückspilz</p>
+                                <h1>19€ <span>/Monat</span></h1>
+                            </div>
+                           <p>Was ist enthalten?</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2000€ im Jahr</p> 
+                           <p><i class="fa-solid fa-check  mx-2"></i> 1000€ pro Schaden</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2x Schäden im Jahr</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center py-5">
+              <div class="col-lg-6 col-md-6">
+                <p style="color: #f0906a;">Seit 1 von 6</p>
+                <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar bg" style="width: 15%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container">
+            <div class="row justify-content-center py-1">
+                <div class="col-lg-6 text-center col-md-6 mb-5">
+                    <button class="top-btn" [routerLink]="['/happy-surance.de']">Abbruch</button>
+                     <button  class="top-btn top-btn2"[routerLink]="['/step2']">Weiter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-6 col-md-6 link">
+                    <div class="link d-flex justify-content-center">
+                        <a href="#">kontakt</a>
+                        <a href="#">ABG</a>
+                        <a href="#">Datenschutzerklärung</a>
+                        <a href="#">Impressum</a>
+                    </div>
+                    <p>Copyright @2023 HappySurance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product2.component.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/51b7a6e7c5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid menu">
+          <a class="navbar-brand" href="#"><img class="img-fluid" src="./Unbenannt-3.png" alt=""></a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="card shadow p-3 mb-5 bg-body rounded banner pt-5 mt-5">
+                    <h1>Willkomen</h1>
+                    <p>Schön, dass Sie da sind. <br>
+                    Schön, dass du da bist, wir helfen dir bei der <br>
+                    Gestaltung deiner HappySurance-Versicherung.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-5">
+                <h4 class="text-center main py-5">Wie ist dein Fahrzeug aktuell versichert ? </h4>
+                <div class="topbtn text-center pb-5">
+                    <button class=" top-btn" [routerLink]="['step1']">Haftpflicht</button>  
+                <button class="top-btn"[routerLink]="['/step1']">Teilkasko</button>
+                <button class="top-btn"   [routerLink]="['/step1/volkasko']">Volkasko</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6">
+                <h5>Wie hoch ist deine Selbstbetilingung bei der Vollkasko?</h5>
+                <div class="inp d-flex mt-3">
+                    <button  style="width: 100px;" class="form-control shadow-none"[routerLink]="['/product1']">300€</button>
+                <button  style="width: 100px;" class="form-control shadow-none"  [routerLink]="['/product2']">500€</button>
+                <button placeholder="1000€" style="width: 100px;" class="form-control shadow-none" type="button" [routerLink]="['/product3']">1000€</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+
+    <section class="cbody">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <div class="title mb-5">
+                                <p>Glückspilz</p>
+                                <h1>9€ <span>/Monat</span></h1>
+                            </div>
+                           <p>Was ist enthalten?</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>600€ im Jahr</p> 
+                           <p><i class="fa-solid fa-check  mx-2"></i> 300€ pro Schaden</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2x Schäden im Jahr</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <div class="title mb-5">
+                                <p>Glückspilz</p>
+                                <h1>12€ <span>/Monat</span></h1>
+                            </div>
+                           <p>Was ist enthalten?</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>1000€ im Jahr</p> 
+                           <p><i class="fa-solid fa-check  mx-2"></i> 500€ pro Schaden</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2x Schäden im Jahr</p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <div class="title mb-5">
+                                <p>Glückspilz</p>
+                                <h1>19€ <span>/Monat</span></h1>
+                            </div>
+                           <p>Was ist enthalten?</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2000€ im Jahr</p> 
+                           <p><i class="fa-solid fa-check  mx-2"></i> 1000€ pro Schaden</p>
+                           <p><i class="fa-solid fa-check  mx-2"></i>2x Schäden im Jahr</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center py-5">
+              <div class="col-lg-6 col-md-6">
+                <p style="color: #f0906a;">Seit 1 von 6</p>
+                <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar bg" style="width: 15%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container">
+            <div class="row justify-content-center py-1">
+                <div class="col-lg-6 text-center col-md-6 mb-5">
+                    <button class="top-btn" [routerLink]="['/happy-surance.de']">Abbruch</button>
+                     <button  class="top-btn top-btn2"[routerLink]="['/step2']">Weiter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-6 col-md-6 link">
+                    <div class="link d-flex justify-content-center">
+                        <a href="#">kontakt</a>
+                        <a href="#">ABG</a>
+                        <a href="#">Datenschutzerklärung</a>
+                        <a href="#">Impressum</a>
+                    </div>
+                    <p>Copyright @2023 HappySurance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>
