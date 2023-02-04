@@ -1,3 +1,4 @@
+step7.css
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +10,58 @@ body{
 }
   
 nav{
-    background-color: #203d6b !important;
+    border-bottom: 2px solid #d2d2d2ba;
+    padding: 20px !important;
+    margin-bottom: 50px !important;
+}
+.help{
+    border: none !important;
+    background-color: white !important;
 }
 .menu a img{
     width: 10%;
 }
+.fa-circle-question{
+    color: #f0906a;
+    font-size: 20px;
+}
+.banner{
+    cursor: auto !important;
+    border: none !important;
+    padding: 59px ;
+}
+.h-pic img{
+     margin-top: -84px;
+     display: flex;
+     float: right;
+     height: 80px;
+     width: 80px;
+     border-radius: 50%;
+     border: 2px solid #203d6b;
+}
+.f-pic{
+    
+}
+.f-pic img{
+    width: 9%;
+    display: flex;
+    float: right;
+}
+.line{
+    border-left: 2px solid #d8d7d7;
+    height: 148px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.line2{
+    border-left: 2px solid  #d8d7d7;
+    height: 189px;
+    position: absolute;
+    top: 38%;
+    left: 10%;
+}
+
 .banner h1{
     font-weight: bold;
     color: #203d6b;
@@ -86,15 +134,52 @@ nav{
     margin-left: 4px;
 }
 .top-btn{
-    border: 1px solid orange !important;
     padding: 15px 22px;
-    border-radius: 10px;
-    background-color: transparent;
-    transition: .3s ease;
+    border: 0.5px solid #adaaaa;
+    border-radius: 5%;
+    margin-right: 30px;
+    background-color: white;
+    box-shadow: rgba(68, 67, 67, 0.16) 0px 1px 4px;
 }
-.top-btn:hover{
-    background-color: orange;
-    color: white;
+.active{
+    border: 2px solid #f0906a;
+    border-radius: 5%;
+}
+.f-btn{
+    color: #f0906a;
+    border: none !important;
+    background-color: white;
+}
+.f-btn i{
+    margin-right: 10px;
+}
+.icon i {
+    display: inline-block;
+    border-radius: 60px;
+    padding: 0.5em 0.6em;
+    background-color: rgba(179, 246, 179, 0.83);
+    color:rgba(89, 117, 89, 0.83);
+    font-size: 22px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.btn{
+    width: 50% !important;
+}
+.btn-secondary{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #adaaaa !important;
+}
+.modal-title {
+    margin-left: 155px !important;
+}
+.modal-body p{
+    color: #848484ba;
+}
+.modal-footer {
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
 }
 .top-btn2{
     background-color: #f0906a;
@@ -104,7 +189,7 @@ nav{
 }
 
 .top-btn2:hover{
-    background-color: #203d6b;
+    background-color: rgb(79, 79, 229);
     border: none !important;
 }
 .bg {
@@ -133,6 +218,18 @@ input {
     font-size: 14px;
 }
 @media (max-width: 575.98px) {
+    .line2 {
+        border-left: 2px solid #d8d7d7;
+        top: 39%;
+        left: 17%;
+    }
+    .line {
+        border-left: 1px solid #cac2c2;
+        height: 173px;
+        position: absolute;
+        top: 19%;
+        left: 17%;
+    }
     .menu a img{
         width: 40%;
     }
@@ -148,5 +245,4 @@ input {
       .link a{
         margin: 0 auto !important;
       }
-
-    }
+}

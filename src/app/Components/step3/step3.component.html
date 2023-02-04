@@ -37,27 +37,58 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Herstellernummer (HSN)</label>
                     <br>
-                    <input maxlength type="text"  class="form-control shadow-none"  maxlength="4" minlength="2" placeholder="4-stellige Nummer"  name="hsn"  [(ngModel)]="mata.hsn">
+                    <input maxlength type="text"  class="form-control shadow-none"  maxlength="4" minlength="2" placeholder="4-stellige Nummer"  name="hsn" [(ngModel)]="inputValues[0]"  [(ngModel)]="mata.hsn">
+                    <div *ngIf="showErrorMessage" style="color: #e91313">Bitte überprüfen Sie Ihre Eingabe.</div>
+
                     <br>
                 </div>
 
-                
+
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Typschlüsselnummer (TSN) </label>
                    <br>
-                    <input   maxlength="3"  class="form-control shadow-none"  placeholder="3 Zeichen" type="text"   [(ngModel)]="mata.tsn"  name="tsn" >
+                    <input   maxlength="3"  class="form-control shadow-none"  placeholder="3 Zeichen" type="text"   [(ngModel)]="inputValues[1]"  [(ngModel)]="mata.tsn"  name="tsn" >
+                 <div *ngIf="showErrorMessage" style="color: #e91313">Bitte überprüfen Sie Ihre Eingabe.</div>
+
+
+                    <br/>
+                    <div className="flex justify-center">
+                        <div
+                            className=" p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                So findest du in der Zulassung die HSN (2.1) & TSN (2.2):
+                            </p>
+                            <img
+                                className="rounded-t-lg"
+                                src="https://happy-surance.de/wp-content/uploads/2022/09/zulassungsbescheinigung_pkw_hsn_tsn.scale_.textBildXS.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <br/>
                   </div>
-
-                   
-                            <br>
-              
-
-
                 <div class="mb-5">
                     <label for="exampleFormControlInput1"  class="form-label shadow-none">Fahrzeugidentifikationsnummer (FIN)</label>
-                    <input  maxlength="17"  class="form-control shadow-none"  placeholder="17 Zeichen" type="text" name="vin"  [(ngModel)]="mata.fin">
-              
-                </div>
+                    <input  maxlength="17"  class="form-control shadow-none"  placeholder="17 Zeichen" type="text" name="vin" [(ngModel)]="inputValues[2]"  [(ngModel)]="mata.fin">
+                    <div *ngIf="showErrorMessage" style="color: #e91313">Bitte überprüfen Sie Ihre Eingabe.</div>
+                  </div>
+
+                <div className="flex justify-center">
+                  <div
+                      className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                          So findest du in der Zulassung die FIN (E):
+                      </p>
+  
+         <img
+                          className="rounded-t-lg"
+                          src="https://happy-surance.de/wp-content/uploads/2022/09/fahrzeugschein-FIN-1.gif"
+                          alt=""
+                      />
+                  </div>
+              </div>
+              <br/>
+              <br/>
                
 
                 
@@ -65,19 +96,23 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1"  class="form-label">Amtliches Kennzeichen (AKZ)</label>
                     <div class="inp row row-cols-lg-auto g-3 align-items-center">
-                        <input maxlength="1" class="form-control  shadow-none" placeholder="A"  style="width: 200px ;"  name="currentInsurer"  [(ngModel)]="mata.lp"> 
+                        <input maxlength="1" class="form-control  shadow-none" placeholder="A"  style="width: 200px ;"  name="currentInsurer"  [(ngModel)]="mata.lp" [(ngModel)]="inputValues[3]"> 
                         <input maxlength="2" class="form-control  shadow-none" placeholder="BC"  style="width: 200px ;"  name="insurenceClass">    
                         <input maxlength="4" class="form-control shadow-none" placeholder="123E" style="width: 200px ;">
+                        <div *ngIf="showErrorMessage" style="color: #e91313">Bitte überprüfen Sie Ihre Eingabe.</div>
+
                     </div>
+
+                  </div>
+      
+                
                 </div>
-           
-        </div>
     </div>
     </div>
     <div class="container">
       <div class="row justify-content-center py-5">
         <div class="col-lg-6 col-md-6">
-          <p style="color: #f0906a;">Seit 3 von 6</p>
+          <p style="color: #f0906a;">3 von 6</p>
           <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar bg" style="width: 50%"></div>
           </div>
@@ -89,13 +124,75 @@
         <div class="row justify-content-center text-center py-5">
             <div class="col-lg-6 col-md-6 col-sm-3">
                 <button class ="top-btn" [routerLink]="['/step2']">Zurück</button>
-                <button class ="top-btn top-btn2" (click)="gotoPage4()">Weiter</button>
+                <button class ="top-btn top-btn2" (click)="setData()" (click)="checkInput()" (click)="gotoPage4()">Weiter</button>
             </div>
         </div>
     </div>
 
 
+    <div class="container">
+      <div class="row justify-content-center text-center">
+          <div class="col-lg-4 col-md-4">
+              <!-- Button trigger modal -->
+              <button type="button" class="f-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <div class="f-btn d-flex">
+                      <i class="fa-regular fa-floppy-disk fs-5"></i>
+                    
+                  </div>
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="icon">
+                          <i class="fa-regular fa-floppy-disk"></i>
+                      </div>
+                      <div class="modal-header">
+                          
+                          
+                          
+                      </div>
+                      <div class="modal-body">
+                      <p>Bitte gib hier deine E-Mail an. Dann bekommst du deinen Antrag als link zugesendet und kannst jederzeit weiter machen.
+                      </p>
+                      <input type="email" class="shadow-none form-control" placeholder="you@example.com">
+                      </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abrechen</button>
+                      <button type="button" class="btn btn-primary">Spreichen</button>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+                
+          </div>
+      </div>
+  </div>
+  <section>
+      <div class="container">
+          <div class="row justify-content-center text-center">
+              <div class="col-md-6 col-md-6 link">
+                  <div class="link d-flex justify-content-center">
+                      <a href="#">kontakt</a>
+                      <a href="#">ABG</a>
+                      <a href="#">Datenschutzerklärung</a>
+                      <a href="#">Impressum</a>
+                  </div>
+                  <p>Copyright @2023 HappySurance</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script>
+
+  </script>
 
 
-</body>
+  </body>
 </html>
+
+
+

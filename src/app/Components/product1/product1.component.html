@@ -22,14 +22,23 @@
           </div>
         </div>
       </nav>
-    <div class="container">
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-6">
-                <div class="card shadow p-3 mb-5 bg-body rounded banner pt-5 mt-5">
+            <div class="col-lg-5 col-md-6">
+                <div class="card shadow my-5 bg-body rounded banner pt-5 mt-5">
+                    <div class="h-pic">
+                        <img class="" alt=""  src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80
+
+                        ">
+                    </div>
                     <h1>Willkomen</h1>
                     <p>Schön, dass Sie da sind. <br>
                     Schön, dass du da bist, wir helfen dir bei der <br>
                     Gestaltung deiner HappySurance-Versicherung.</p>
+                    <div class="f-pic">
+                        <img class="" src="./Unbenannt-2 (4).png" alt="">
+                        <span>Happy Surance</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,7 +47,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-6">
-                <h4 class="text-center main py-5">Wie ist dein Fahrzeug aktuell versichert ? </h4>
+       
                 <div class="topbtn  text-center pb-5">
                     <button style="border-radius: 13px;" (click)="changeColor1($event)" class="top-btn btn-group" [routerLink]="['step1']">Haftpflicht</button>  
                 <button style="border-radius: 13px;" (click)="changeColor1($event)"  class="top-btn btn-group"  [routerLink]="['step1']">Teilkasko</button>
@@ -46,21 +55,34 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+
+          <div class="col-lg-6 col-md-6" style="width: 50%;  margin-right: 1200px; margin-left: 480px;">
+            <p>Wie ist dein Fahrzeug aktuell versichert ?</p>
+         </div>
+         </div>
+    
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-6">
-                <h5>Wie hoch ist deine Selbstbetilingung bei der Vollkasko?</h5>
-                <div class="inp d-flex mt-3">
-                    <button  style="width: 100px ; margin-right: 10px;" (click)="set300()" (click)="changeColor2($event)"  class="form-control shadow-none">300€</button>
-                <button  style="width: 100px;  margin-right: 10px;"  (click)="set500()" (click)="changeColor2($event)"  class="form-control shadow-none" >500€</button>
-                <button style="width: 100px;  margin-right: 10px;"  (click)="set1000()"  (click)="changeColor2($event)"  style="width: 100px;" class="form-control shadow-none" >1000€</button>
+            <div class="container">
+                <div class="row" style="display: flex; flex-wrap: wrap;">
+                  <div class="col-lg-6 col-md-6" style="width: 50%;  margin-right: 1200px; margin-left: 900px;">
+                    <h5></h5>
+                  </div>
+                  <div class="inp d-flex mt-3" style="margin-left: 230px;">
+                    <button style="width: 100px ; margin-right: 10px;" (click)="set300()" (click)="changeColor2($event)" class="form-control shadow-none">300€</button>
+                    <button style="width: 100px;  margin-right: 10px;" (click)="set500()" (click)="changeColor2($event)" class="form-control shadow-none">500€</button>
+                    <button style="width: 100px;  margin-right: 10px;" (click)="set1000()" (click)="changeColor2($event)" class="form-control shadow-none">1000€</button>
+                  </div>
                 </div>
-            </div>
+              </div>
         </div>
+
+
+        
+
     </div>
 
-
+ 
 
 <br>
 <br>
@@ -136,5 +158,6 @@
             </div>
         </div>
     </section>
+
     </body>
 </html>

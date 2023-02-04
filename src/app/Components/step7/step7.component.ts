@@ -8,7 +8,8 @@ import { Mata } from 'src/Mata';
 })
 export class Step7Component implements OnInit {
 
-
+  inputValues = ['', '', ''];
+  showErrorMessage = false;
   mata !: Mata ; 
 
   receivedData !: Mata  ; 
@@ -36,6 +37,23 @@ ngOnInit(): void {
       console.log('receivedData' , this.receivedData) ; 
     }
 
+  }
+
+  checkInput() {
+    if (this.inputValues.filter(val => val.length === 0).length > 0) {
+      this.showErrorMessage = true;
+    } else {
+  
+  
+  this.router.navigateByUrl('/step3' , {state : {mata : this.receivedData}})
+    }
+  }
+   
+  setData(){
+    this.receivedData.versicherungsbeginn = this.mata.versicherungsbeginn  ;
+    this.receivedData.hauptfaelligkeit = this.mata.hauptfaelligkeit  ;
+    this.receivedData.aktueller_versicherer  = this.mata.aktueller_versicherer  ;
+  
   }
 
 }

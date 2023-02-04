@@ -9,27 +9,29 @@ import { Router } from '@angular/router';
 })
 export class Step4Component implements OnInit {
 
-  
+  selectedButton1 = '';
+  selectedButton2 = '';
+  selectedButton3 = '';
+  selectedButton4 = '';
 
-  changeColor(event : Event) {
-    let buttons = document.querySelectorAll('button');
-  
-    // Reset the border color of all buttons
-    buttons.forEach(button => button.style.borderColor = 'white');
-  
-    // Change the border color of the clicked button
-  
-    (event.target as HTMLElement).style.borderColor = '#f0906a';
-    (event.target as HTMLElement).style.borderWidth = '2.5px';
-    (event.target as HTMLElement).style.borderStyle = 'solid';
-    
-  
-  
-  
+  changeColor(event: Event, question: string) {
+    if (question === 'question1') {
+      this.selectedButton1 = (event.target as HTMLButtonElement).innerText;
+    } else {
+      this.selectedButton2 = (event.target as HTMLButtonElement).innerText;
+    }
+   
+  }
+  changeColor2(event: Event, question: string) {
+    if (question === 'question3') {
+      this.selectedButton3= (event.target as HTMLButtonElement).innerText;
+    } else {
+      this.selectedButton4= (event.target as HTMLButtonElement).innerText;
+    }
   }
 
-  
-  mata !: Mata ; 
+ 
+ mata !: Mata ; 
   receivedData !: Mata  ; 
 
   constructor(private router : Router) { }

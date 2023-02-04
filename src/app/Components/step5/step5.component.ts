@@ -8,21 +8,18 @@ import { Router } from '@angular/router';
 })
 export class Step5Component implements OnInit {
 
+
+  
+  inputValues = ['', '', '','', '' ,'','',''];
+  showErrorMessage = false;
+
   mata !: Mata ; 
   receivedData !: Mata  ; 
 
   constructor(private router : Router) { }
 
  gotoPage6() {
-  this.receivedData.vorname = this.mata.vorname  ; 
-  this.receivedData.nachname = this.mata.nachname  ; 
-  this.receivedData.geburtsdatum = this.mata.geburtsdatum  ; 
-  this.receivedData.strasse = this.mata.strasse  ; 
-  this.receivedData.ort = this.mata.ort  ; 
-  this.receivedData.postleitzahl = this.mata.postleitzahl  ; 
-  this.receivedData.telefonnummer = this.mata.telefonnummer  ; 
-  this.receivedData.email = this.mata.email  ; 
-
+  
  this.router.navigateByUrl('/step6' , {state : {mata : this.receivedData}})
  }
  
@@ -93,6 +90,27 @@ setProfDr() {
   this.receivedData.title = "Prof.Dr."
 }
 
+
+
+
+
+checkInput() {
+
+
+       this.router.navigateByUrl('/step6' , {state : {mata : this.receivedData}})
+
+}
+ 
+setData(){
+  this.receivedData.vorname = this.mata.vorname  ; 
+  this.receivedData.nachname = this.mata.nachname  ; 
+  this.receivedData.geburtsdatum = this.mata.geburtsdatum  ; 
+  this.receivedData.strasse = this.mata.strasse  ; 
+  this.receivedData.ort = this.mata.ort  ; 
+  this.receivedData.postleitzahl = this.mata.postleitzahl  ; 
+  this.receivedData.telefonnummer = this.mata.telefonnummer  ; 
+  this.receivedData.email = this.mata.email  ; 
+}
 
 
 

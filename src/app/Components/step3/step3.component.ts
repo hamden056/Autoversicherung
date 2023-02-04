@@ -17,12 +17,7 @@ export class Step3Component implements OnInit {
   constructor(private router : Router) { }
 
  gotoPage4() {
-  this.receivedData.hsn = this.mata.hsn  ; 
-  this.receivedData.tsn = this.mata.tsn  ; 
-  this.receivedData.fin = this.mata.fin  ; 
-  this.receivedData.lp = this.mata.lp  ; 
-  console.log('send data'  , this.receivedData)
- this.router.navigateByUrl('/step4' , {state : {mata : this.receivedData}})
+
  }
 
  ngOnInit(): void {
@@ -34,5 +29,29 @@ this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,
       console.log('receivedData' , this.receivedData) ; 
     }
   
+
   }
+  
+  inputValues = ['', '', '',''];
+  showErrorMessage = false;
+
+
+
+checkInput() {
+  if (this.inputValues.filter(val => val.length === 0).length > 0) {
+    this.showErrorMessage = true;
+  } else {
+
+       this.router.navigateByUrl('/step4' , {state : {mata : this.receivedData}})
+  }
+}
+ 
+setData(){
+  this.receivedData.hsn = this.mata.hsn  ; 
+  this.receivedData.tsn = this.mata.tsn  ; 
+  this.receivedData.fin = this.mata.fin  ; 
+  this.receivedData.lp =  "K-XX 354"  ; 
+  console.log('send data'  , this.receivedData)
+
+}
 }

@@ -8,39 +8,28 @@ import { Router } from '@angular/router';
 })
 export class Step6Component implements OnInit {
 
-  
+  inputValues = [''];
+  showErrorMessage = false;
+
   mata !: Mata ; 
   receivedData !: Mata  ; 
 
   constructor(private router : Router) { }
 
-  changeColor(event : Event) {
-    let buttons = document.querySelectorAll('button');
+
+  selectedButton1 = '';
+  selectedButton2 = '';
+
+  changeColor(event: Event, question: string) {
+    if (question === 'question1') {
+      this.selectedButton1 = (event.target as HTMLButtonElement).innerText;
+    } else {
+      this.selectedButton2 = (event.target as HTMLButtonElement).innerText;
+    }
+  }
+
   
-    // Reset the border color of all buttons
-    buttons.forEach(button => button.style.borderColor = 'white');
-  
-    // Change the border color of the clicked button
-  
-    (event.target as HTMLElement).style.borderColor = '#f0906a';
-    (event.target as HTMLElement).style.borderWidth = '2.5px';
-    (event.target as HTMLElement).style.borderStyle = 'solid';
     
-  
-  
-  
-  }
-
-  gotoPage7() {
-
-
-    this.receivedData.iban = this.mata.iban ; 
-
-   this.router.navigateByUrl('/step7' , {state : {mata : this.receivedData}})
-   
-   console.log('receivedData' , this.receivedData) ; 
-  }
-  
    ngOnInit(): void {
   let date  = new Date () ; 
   this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
@@ -49,6 +38,20 @@ export class Step6Component implements OnInit {
         this.receivedData = history.state.mata as Mata  ;   
         console.log('receivedData' , this.receivedData) ; 
       }
+    
+    }
+
+    checkInput() {
+      if (this.inputValues.filter(val => val.length === 0).length > 0) {
+        this.showErrorMessage = true;
+      } else {
+    this.router.navigateByUrl('/step7' , {state : {mata : this.receivedData}})
+      }
+    }
+     
+    setData(){
+     
+    this.receivedData.iban = this.mata.iban ; 
     
     }
   

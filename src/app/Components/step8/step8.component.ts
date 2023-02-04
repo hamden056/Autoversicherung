@@ -86,11 +86,11 @@ export class Step8Component implements OnInit {
    insuranceData_.hsn = this.receivedData.hsn ; 
    insuranceData_.tsn = this.receivedData.tsn ; 
    insuranceData_.vin = this.receivedData.fin ; 
-   insuranceData_.lp = this.receivedData.lp ; 
-   insuranceData_.currentInsurer = "Allianz" ; 
+   insuranceData_.lp = "A-XX 476"; 
+   insuranceData_.currentInsurer = "ADAC Autoversicherung AG" ; 
    insuranceData_.insurenceClass = this.receivedData.aktuelle_versicherung ; 
    insuranceData_.tarif = this.receivedData.tarif ; 
-   insuranceData_.iban = this.receivedData.iban  ;
+   insuranceData_.iban = "DE637463763"  ;  
 
    //SetCustomer
 
