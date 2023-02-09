@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Mata } from 'src/Mata';
 import { Router } from '@angular/router';
+import { lp } from 'src/app/lp';
 @Component({
   selector: 'app-step1',
   templateUrl: './step1.component.html',
@@ -9,7 +10,27 @@ import { Router } from '@angular/router';
 export class Step1Component implements OnInit {
 
 
+  pl : lp = new lp() ; 
+
+  inputValues = ['', ''];
+
+  showErrorMessage = false;
   
+  
+
+  
+checkInput() {
+  if (this.inputValues.filter(val => val.length === 0).length > 0) {
+    this.showErrorMessage = true;
+  } else {
+
+
+this.router.navigateByUrl('/step3' , {state : {mata : this.receivedData}})
+  }
+}
+
+
+
 changeColor(event : Event) {
   let buttons = document.querySelectorAll('button');
 
@@ -77,7 +98,7 @@ selectedCard !: number;
 
  ngOnInit(): void {
   let date  = new Date () ; 
-  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
   )  ; 
   if (history.state.mata){
     this.receivedData = history.state.mata as Mata  ; 

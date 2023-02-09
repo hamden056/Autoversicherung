@@ -12,11 +12,12 @@ import { Step7Component } from './Components/step7/step7.component';
 import { Step8Component } from './Components/step8/step8.component';
 import { Step2Component } from './Components/step2/step2.component';
 import { VolkasoComponent } from './Components/volkaso/volkaso.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Product1Component } from './Components/product1/product1.component';
 import { Product2Component } from './Components/product2/product2.component';
 import { Product3Component } from './Components/product3/product3.component';
 import { Step9Component } from './Components/step9/step9.component';
+
 
 
 @NgModule({
@@ -35,14 +36,15 @@ import { Step9Component } from './Components/step9/step9.component';
     Product1Component,
     Product2Component,
     Product3Component,
-    Step9Component,
+    Step9Component
  
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule  ,
-    FormsModule
+    FormsModule ,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

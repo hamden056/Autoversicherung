@@ -1,7 +1,7 @@
 
 
 import { Customer } from 'src/app/Moduls/customer';
-
+import { lp } from 'src/app/lp';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -19,6 +19,7 @@ import { Mata } from 'src/Mata';
 export class Step8Component implements OnInit {
 
 
+  pl : lp  = new lp () ; 
 
 
   customer !: Customer ;
@@ -69,7 +70,7 @@ export class Step8Component implements OnInit {
   let date  = new Date () ; 
 
    const  customerData_  = new  CustomerData('' ,'' ,'' ,'' ,'' ,'','') ;
-   const insuranceData_  = new InsuranceData('' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ) ;
+   const insuranceData_  = new InsuranceData('' ,'' ,'' ,this.pl ,'' ,'' ,'' ,'' ) ;
  
    //SetCustomerData
 
@@ -86,7 +87,9 @@ export class Step8Component implements OnInit {
    insuranceData_.hsn = this.receivedData.hsn ; 
    insuranceData_.tsn = this.receivedData.tsn ; 
    insuranceData_.vin = this.receivedData.fin ; 
-   insuranceData_.lp = "A-XX 476"; 
+   insuranceData_.lp.lp1 = this.receivedData.lp.lp1  ; 
+   insuranceData_.lp.lp2 = this.receivedData.lp.lp2 ; 
+   insuranceData_.lp.lp3 = this.receivedData.lp.lp3  ; 
    insuranceData_.currentInsurer = "ADAC Autoversicherung AG" ; 
    insuranceData_.insurenceClass = this.receivedData.aktuelle_versicherung ; 
    insuranceData_.tarif = this.receivedData.tarif ; 
@@ -136,15 +139,16 @@ export class Step8Component implements OnInit {
 
 
    }
-
+ 
+    
 
   ngOnInit(): void {
 
     let date  = new Date () ; 
-    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' , this.pl,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
     )  ; 
 
-    this.insuranceData  = new InsuranceData('' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ) ;
+    this.insuranceData  = new InsuranceData('' ,'' ,'' , this.pl ,'' ,'' ,'' ,'' ) ;
     this.customerData  = new  CustomerData('' ,'' ,'' ,'' ,'' ,'','') ;
     
     this.customer = new Customer(this.customerData ,this.insuranceData) ; 

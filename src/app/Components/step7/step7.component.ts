@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { lp } from 'src/app/lp';
 import { Mata } from 'src/Mata';
+
+
 @Component({
   selector: 'app-step7',
   templateUrl: './step7.component.html',
   styleUrls: ['./step7.component.css']
 })
 export class Step7Component implements OnInit {
+
+  pl : lp = new lp() ;
 
   inputValues = ['', '', ''];
   showErrorMessage = false;
@@ -29,7 +34,7 @@ gotoPage8(){
 ngOnInit(): void {
 
   let date  = new Date () ; 
-  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
   )  ;  
 
     if (history.state.mata){

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Mata } from 'src/Mata';
+import { lp } from 'src/app/lp';
 @Component({
   selector: 'app-product1',
   templateUrl: './product1.component.html',
@@ -9,6 +10,8 @@ import { Mata } from 'src/Mata';
 export class Product1Component implements OnInit {
 
 
+
+  pl : lp =new lp () ; 
 
   
 
@@ -86,6 +89,16 @@ selectedCard !: number;
     this.mata.tarif = "1000€" ; 
 
   }
+  set0(){
+     
+    this.mata.tarif = "0€" ; 
+
+  }
+
+  setgrosserals1000(){
+    this.mata.tarif = ">1000€" ; 
+
+  }
 
   gotoPage2() {
     console.log('send data'  , this.mata)
@@ -94,7 +107,7 @@ selectedCard !: number;
   
    ngOnInit(): void {
     let date  = new Date () ; 
-    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
     )  ; 
     if (history.state.mata){
       this.receivedData = history.state.mata as Mata  ; 

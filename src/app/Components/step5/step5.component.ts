@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Mata } from 'src/Mata';
 import { Router } from '@angular/router';
+import { lp } from 'src/app/lp';
+
+import { ValidatorFn, AbstractControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+
+
 @Component({
   selector: 'app-step5',
   templateUrl: './step5.component.html',
@@ -8,10 +14,8 @@ import { Router } from '@angular/router';
 })
 export class Step5Component implements OnInit {
 
-
+  pl : lp = new lp() ;
   
-  inputValues = ['', '', '','', '' ,'','',''];
-  showErrorMessage = false;
 
   mata !: Mata ; 
   receivedData !: Mata  ; 
@@ -22,11 +26,34 @@ export class Step5Component implements OnInit {
   
  this.router.navigateByUrl('/step6' , {state : {mata : this.receivedData}})
  }
+
+
+ inputValue!: string;
+
+ removeError() {
+   this.inputValue = this.inputValue.trim();
+ }
+
+ isValidEmail(email: string) {
+   // Returns true if email is in valid format, false otherwise
+   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   return re.test(email);
+ }
+
+ submit() {
+  if (!this.inputValue) {
+    return alert('Please check your input');
+  } else if (!this.isValidEmail(this.inputValue)) {
+    return alert('Email is invalid');
+  }
+
+  // Perform submit logic
+}
  
 
  ngOnInit(): void {
   let date  = new Date () ; 
-  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
   )  ; 
   if (history.state.mata){
           this.receivedData = history.state.mata as Mata  ;   
@@ -35,6 +62,20 @@ export class Step5Component implements OnInit {
   
   }
 
+  
+  email!: string;
+  valid!: boolean;
+
+  validateEmail() {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    this.valid = re.test(this.email);
+  }
+ 
+
+
+
+
+  
 
 changeColor2(event : Event) {
   let buttons = document.querySelectorAll('button');
@@ -90,17 +131,28 @@ setProfDr() {
   this.receivedData.title = "Prof.Dr."
 }
 
-
-
-
-
+inputValues = ['', '', '', '','', '', '', ''];
+showErrorMessage = [false, false, false, false, false, false, false, false];
+  
 checkInput() {
-
-
-       this.router.navigateByUrl('/step6' , {state : {mata : this.receivedData}})
-
+  this.showErrorMessage = [false, false, false];
+  for (let i = 0; i < this.inputValues.length; i++) {
+    if (this.inputValues[i].length === 0) {
+      this.showErrorMessage[i] = true;
+    }
+  }
+  if (this.showErrorMessage.filter(val => val).length === 0) {
+    this.router.navigateByUrl('/step6', {state: {mata: this.receivedData}});
+  }
 }
- 
+
+emailinp : boolean = false ; 
+
+emailo(){
+
+this.emailinp = !this.emailinp ;
+
+} 
 setData(){
   this.receivedData.vorname = this.mata.vorname  ; 
   this.receivedData.nachname = this.mata.nachname  ; 

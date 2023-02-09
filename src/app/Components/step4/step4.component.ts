@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Mata } from 'src/Mata';
 import { Router } from '@angular/router';
+import { lp } from 'src/app/lp';
 
 @Component({
   selector: 'app-step3',
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./step4.component.css']
 })
 export class Step4Component implements OnInit {
+
+  pl : lp = new lp() ;
 
   selectedButton1 = '';
   selectedButton2 = '';
@@ -29,6 +32,54 @@ export class Step4Component implements OnInit {
       this.selectedButton4= (event.target as HTMLButtonElement).innerText;
     }
   }
+  inputValues = ['', '', '', ''];
+  showErrorMessage = [false, false, false, false];
+
+
+  change1(){
+    this.showErrorMessage[0]=false  ;
+  
+  }
+  change2(){
+    this.showErrorMessage[1] =false ; 
+
+  }
+  change3(){
+    this.showErrorMessage[2] =false ; 
+  }
+  
+ change4(){
+  this.showErrorMessage[3] = false ; 
+ }
+  
+  checkInput1(){
+    this.showErrorMessage[0] = true ; 
+
+  }
+  checkInput2(){
+    this.showErrorMessage[1]=true ; 
+  }
+  checkInput3(){
+    this.showErrorMessage[2] = true ; 
+
+  }
+  checkInput4(){
+    this.showErrorMessage[3]=true ; 
+  }
+  
+  chek(){
+     if (!this.showErrorMessage[0]&&!this.showErrorMessage[1]&&!this.showErrorMessage[2]&&!this.showErrorMessage[3]){
+      console.log('send data'  , this.receivedData)
+       this.router.navigateByUrl('/step5' , {state : {mata : this.receivedData}})
+
+     }
+     else {
+      this.router.navigateByUrl('/step4' , {state : {mata : this.receivedData}})
+
+     }
+     
+  }
+
 
  
  mata !: Mata ; 
@@ -38,14 +89,13 @@ export class Step4Component implements OnInit {
 
  gotoPage5() {
 
- console.log('send data'  , this.receivedData)
- this.router.navigateByUrl('/step5' , {state : {mata : this.receivedData}})
+ 
 
 }
 
  ngOnInit(): void {
   let date  = new Date () ; 
-  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
   )  ; 
   if (history.state.mata){
 
