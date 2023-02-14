@@ -42,11 +42,7 @@ export class Step8Component implements OnInit {
    
     const apiUrl = '/hs/postCustomer?';
     const apiKey = '';
-
-
-    
-      
-  
+ 
   let date  = new Date () ; 
 
    const  customerData_  = new  CustomerData('' ,'' ,'' ,'' ,'' ,'','') ;
@@ -83,8 +79,7 @@ export class Step8Component implements OnInit {
     "insuranceData": insuranceData_ 
   })
 
-
-    fetch(apiUrl, {
+  fetch(apiUrl, {
       method: 'POST',
       headers: new Headers ({
         'Content-Type': 'application/json',
