@@ -31,16 +31,7 @@ import { lp } from 'src/app/lp';
         </div>
       </nav>
 
-      <div class="container">
-      <div class="row justify-content-center py-5">
-        <div class="col-lg-6 col-md-6">
-          <p style="color: #f0906a;">2 von 6</p>
-          <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg" style="width: 35%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+
       <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-6 pt-3">
@@ -55,8 +46,9 @@ import { lp } from 'src/app/lp';
                 <div class="mb-3">
                         <label  for="exampleFormControlInput1" class="form-label">Versicherungsbeginn</label>
                         <br>
-                        <input  placeholder="08/02"    class="form-control shadow-none"   name="Versicherungsbeginn" type="Date"   [(ngModel)]="inputValues[0]" [(ngModel)]="mata.versicherungsbeginn">
-                    <div *ngIf="showErrorMessage[0]" style="color: #e91313">Bitte überprüfen Sie Ihre Eingabe.</div>
+                        <input    [value]="today" class="form-control shadow-none"   name="Versicherungsbeginn" type="date"  [(ngModel)]="mata.versicherungsbeginn"  [(ngModel)]="inputValues[0]" >
+                        <div *ngIf="showErrorMessage[0]" style="color: #e91313">Bitte überprüfen Sie Ihre Eingabe.</div>
+
          </div>
                       <br>
                       <div class="mb-3">
@@ -195,6 +187,16 @@ import { lp } from 'src/app/lp';
           </div>
       </div>
   </div>
+  <div class="container">
+      <div class="row justify-content-center py-5">
+        <div class="col-lg-6 col-md-6">
+          <p style="color: #f0906a;">2 von 8</p>
+          <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg" style="width: 25%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   <section>
       <div class="container">
           <div class="row justify-content-center text-center">
@@ -232,28 +234,29 @@ import { lp } from 'src/app/lp';
 export class Step2Component implements OnInit {
 
   pl : lp = new lp() ;
-
-
-  
+  today = new Date().toISOString().substring(0, 10);  
   mata !: Mata ; 
   receivedData !: Mata  ; 
+  
 
   constructor(private router : Router) { }
 
 
  ngOnInit(): void {
   let date  = new Date () ; 
-  this.mata = new Mata ('','','', '',date,'','',date ,'' ,'' ,'' ,this.pl,''  ,'' ,'' ,date ,'' ,'' ,'','' ,''   )  ; 
+  this.mata = new Mata ('','','', '',date,'','',date ,'' ,'' ,'' ,'',''  ,'' ,'' ,date ,'' ,'' ,'','' ,''   )  ; 
   if (history.state.mata){
     this.receivedData = history.state.mata as Mata  ; 
-    console.log('receivedData' , this.receivedData) ; 
+    console.log('receivedData' , this.receivedData) ;
+    console.log('matata' , this.mata) 
   }
+  window.scrollTo(0, 0);
 }
 
 
 
 
-inputValues = ['', ''];
+inputValues = [this.today, ''];
 showErrorMessage = [false, false];
 
 checkInput() {
@@ -273,6 +276,7 @@ setData(){
   this.receivedData.versicherungsbeginn = this.mata.versicherungsbeginn  ;
   this.receivedData.hauptfaelligkeit = this.mata.hauptfaelligkeit  ;
   this.receivedData.aktueller_versicherer = this.mata.aktueller_versicherer  ;
+   console.log('send data'  , this.receivedData)
 
 }
 

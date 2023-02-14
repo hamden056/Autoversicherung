@@ -95,7 +95,7 @@ export class Step4Component implements OnInit {
 
  ngOnInit(): void {
   let date  = new Date () ; 
-  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'',''  ,'' ,'' ,date,'' ,'' ,'','' ,''
   )  ; 
   if (history.state.mata){
 
@@ -103,6 +103,8 @@ export class Step4Component implements OnInit {
       console.log('receivedData' , this.receivedData) ; 
     }
   
+    window.scrollTo(0, 0);
+
   }
 }
     

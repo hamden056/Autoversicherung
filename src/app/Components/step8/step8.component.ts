@@ -41,28 +41,8 @@ export class Step8Component implements OnInit {
   sendData() {
    
     const apiUrl = '/hs/postCustomer?';
-    const apiKey = '6c97c113-6328-44bc-8a70-4e3f06010188';
-    const customerData = {
-      "customerData": {   
-      "city": "Dortmund",
-      "email": "hamdenehebela@gmail.com" ,
-      "firstName": "Hamdene",
-      "lastName": "Hebela" ,
-      "phoneNumber": "01749313379",
-      "postalCode": "44227" ,
-      "street": "Ostenbergstrasse109A"
-      },
-      "insuranceData": {
-        "hsn": "bb",
-        "tsn": "bb",
-        "vin": "bb",
-        "lp": "bb",
-        "currentInsurer": "bb",
-        "insurenceClass": "Normalo",
-        "tarif": "1000",
-        "iban": "DE86500105176262346874"
-      }
-    };
+    const apiKey = '';
+
 
     
       
@@ -70,7 +50,7 @@ export class Step8Component implements OnInit {
   let date  = new Date () ; 
 
    const  customerData_  = new  CustomerData('' ,'' ,'' ,'' ,'' ,'','') ;
-   const insuranceData_  = new InsuranceData('' ,'' ,'' ,this.pl ,'' ,'' ,'' ,'' ) ;
+   const insuranceData_  = new InsuranceData('' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ) ;
  
    //SetCustomerData
 
@@ -87,9 +67,9 @@ export class Step8Component implements OnInit {
    insuranceData_.hsn = this.receivedData.hsn ; 
    insuranceData_.tsn = this.receivedData.tsn ; 
    insuranceData_.vin = this.receivedData.fin ; 
-   insuranceData_.lp.lp1 = this.receivedData.lp.lp1  ; 
-   insuranceData_.lp.lp2 = this.receivedData.lp.lp2 ; 
-   insuranceData_.lp.lp3 = this.receivedData.lp.lp3  ; 
+   insuranceData_.lp = this.receivedData.lp; 
+  // insuranceData_.lp.lp2 = this.receivedData.lp.lp2 ; 
+  // insuranceData_.lp.lp3 = this.receivedData.lp.lp3  ; 
    insuranceData_.currentInsurer = "ADAC Autoversicherung AG" ; 
    insuranceData_.insurenceClass = this.receivedData.aktuelle_versicherung ; 
    insuranceData_.tarif = this.receivedData.tarif ; 
@@ -145,10 +125,10 @@ export class Step8Component implements OnInit {
   ngOnInit(): void {
 
     let date  = new Date () ; 
-    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' , this.pl,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' , '',''  ,'' ,'' ,date,'' ,'' ,'','' ,''
     )  ; 
 
-    this.insuranceData  = new InsuranceData('' ,'' ,'' , this.pl ,'' ,'' ,'' ,'' ) ;
+    this.insuranceData  = new InsuranceData('' ,'' ,'' , '' ,'' ,'' ,'' ,'' ) ;
     this.customerData  = new  CustomerData('' ,'' ,'' ,'' ,'' ,'','') ;
     
     this.customer = new Customer(this.customerData ,this.insuranceData) ; 

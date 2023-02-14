@@ -1,0 +1,248 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    font-family: Arial, Helvetica, sans-serif !important;
+  
+}
+  
+nav{
+    border-bottom: 2px solid #d2d2d2ba;
+    padding: 20px !important;
+    margin-bottom: 50px !important;
+}
+.help{
+    border: none !important;
+    background-color: white !important;
+}
+.menu a img{
+    width: 10%;
+}
+.fa-circle-question{
+    color: #f0906a;
+    font-size: 20px;
+}
+.banner{
+    cursor: auto !important;
+    border: none !important;
+    padding: 59px ;
+}
+.h-pic img{
+     margin-top: -84px;
+     display: flex;
+     float: right;
+     height: 80px;
+     width: 80px;
+     border-radius: 50%;
+     border: 2px solid #203d6b;
+}
+.f-pic{
+    
+}
+.f-pic img{
+    width: 9%;
+    display: flex;
+    float: right;
+}
+.line{
+    border-left: 2px solid #d8d7d7;
+    height: 148px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.line2{
+    border-left: 2px solid  #d8d7d7;
+    height: 189px;
+    position: absolute;
+    top: 38%;
+    left: 10%;
+}
+
+.banner h1{
+    font-weight: bold;
+    color: #203d6b;
+}
+.title{
+    font-weight: bold;
+    color: #203d6b;
+    margin-bottom: 20px;
+}
+.icon-btn{
+    background-color: #f0906a;
+    padding: 0px 15px;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+.icon-btn i{
+    color: #203d6b;
+    font-size: 30px;
+}
+.toptext h4{
+    font-weight: bold;
+}
+.bottom{
+    background-color: #c8c8c8a8;
+    padding: 30px;
+}
+.bottom a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.versicherung{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.fa-file:before {
+    margin-left: 6px;
+}
+.card h3{
+    font-weight: bold;
+}
+.versicherung i{
+    font-size: 25px;
+    color: antiquewhite;
+    background-color: #f0906a;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.versicherung h5{
+    font-weight: bold;
+    border-bottom: 1px solid #7474746a;
+}
+.akkutele{
+    margin-left: 115px;
+}
+.akkutele p{
+    color: #f0906a;
+}
+.akkutele span{
+    color: #203d6b;
+    margin-left: 10px;
+}
+.fa-car:before {
+    margin-left: 2px;
+}
+.fa-user:before {
+    margin-left: 4px;
+}
+.top-btn{
+    padding: 15px 22px;
+    border: 0.5px solid #adaaaa;
+    border-radius: 5%;
+    margin-right: 30px;
+    background-color: white;
+    box-shadow: rgba(68, 67, 67, 0.16) 0px 1px 4px;
+}
+.active{
+    border: 2px solid #f0906a;
+    border-radius: 5%;
+}
+.f-btn{
+    color: #f0906a;
+    border: none !important;
+    background-color: white;
+}
+.f-btn i{
+    margin-right: 10px;
+}
+.icon i {
+    display: inline-block;
+    border-radius: 60px;
+    padding: 0.5em 0.6em;
+    background-color: rgba(179, 246, 179, 0.83);
+    color:rgba(89, 117, 89, 0.83);
+    font-size: 22px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.btn{
+    width: 50% !important;
+}
+.btn-secondary{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #adaaaa !important;
+}
+.modal-title {
+    margin-left: 155px !important;
+}
+.modal-body p{
+    color: #848484ba;
+}
+.modal-footer {
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+}
+.top-btn2{
+    background-color: #f0906a;
+    color: white;
+    font-weight: bold;
+    border: none !important;
+}
+
+.top-btn2:hover{
+    background-color: rgb(79, 79, 229);
+    border: none !important;
+}
+.bg {
+    background-color: #f0906a !important;
+}
+label{
+    font-size: 20px;
+}
+input {
+    width: 350px;
+}
+.ntext{
+    color: rgb(112, 112, 112);
+    font-size: 14px;
+}
+.link{
+    margin: 50px 0px;
+}
+.link a{
+    text-decoration: none;
+    color: rgb(125, 125, 125);
+    margin-right: 50px;
+}
+.link p{
+    color: rgb(125, 125, 125);
+    font-size: 14px;
+}
+@media (max-width: 575.98px) {
+    .line2 {
+        border-left: 2px solid #d8d7d7;
+        top: 39%;
+        left: 17%;
+    }
+    .line {
+        border-left: 1px solid #cac2c2;
+        height: 173px;
+        position: absolute;
+        top: 19%;
+        left: 17%;
+    }
+    .menu a img{
+        width: 40%;
+    }
+    .title1{
+        width: 50% !important;
+    }
+    .top-btn{
+        margin-right: 0px;
+    }
+    .link{
+        flex-wrap: wrap;
+      }
+      .link a{
+        margin: 0 auto !important;
+      }
+}

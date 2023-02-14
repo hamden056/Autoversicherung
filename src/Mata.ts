@@ -14,7 +14,7 @@ export class Mata {
     hsn !: string ; 
     tsn !: string ; 
     fin !: string ; 
-    lp !:  lp  ; 
+    lp !:  string ; 
     
     title !:string ; 
     anrede !: string ; 
@@ -32,7 +32,7 @@ export class Mata {
     
 
     constructor(iban : string ,title : string , tarif : string  , tarifo : string ,versicherungsbeginn:Date ,    aktuelle_versicherung : string  , aktueller_versicherer : string 
-        ,hauptfaelligkeit : Date , hsn : string , tsn : string , fin :string  , lp :lp
+        ,hauptfaelligkeit : Date , hsn : string , tsn : string , fin :string  , lp :string
         ,andere : string , vorname : string , nachname :string ,geburtsdatum : Date , strasse : string ,
         ort: string ,  postleitzahl  : string , telefonnummer : string , email : string 
     )

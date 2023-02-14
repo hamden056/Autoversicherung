@@ -2,22 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Mata } from 'src/Mata';
 import { Router } from '@angular/router';
 import { lp } from 'src/app/lp';
+
+
 @Component({
-  selector: 'app-step1',
-  templateUrl: './step1.component.html',
-  styleUrls: ['./step1.component.css']
+  selector: 'app-stept1',
+  templateUrl: './stept1.component.html',
+  styleUrls: ['./stept1.component.css']
 })
-export class Step1Component implements OnInit {
+export class Stept1Component implements OnInit {
 
 
-  
+
   pl : lp = new lp() ; 
 
   inputValues = ['', ''];
 
   showErrorMessage = false;
-  
-
   
   
 
@@ -107,14 +107,12 @@ selectedCard !: number;
     this.receivedData = history.state.mata as Mata  ; 
     console.log('receivedData' , this.receivedData) ; 
   }
-
-
-  window.scrollTo(0, 0);
-
 }
 
 
   
 }
+
+
 
 

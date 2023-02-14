@@ -12,6 +12,8 @@ import { Step8Component } from './Components/step8/step8.component';
 import { Product1Component } from './Components/product1/product1.component';
 import { Product2Component } from './Components/product2/product2.component';
 import { Step9Component } from './Components/step9/step9.component';
+import { Stept7Component } from './Components/stept7/stept7.component';
+
 
 const routes: Routes = [
 
@@ -22,10 +24,13 @@ const routes: Routes = [
   {path : 'step4' ,  component : Step4Component} ,
   {path : 'step5' ,  component : Step5Component} ,
     {path : 'step6' ,  component : Step6Component},
-    {path : 'step7' ,  component : Step7Component},
+    // eyyyak ntesti step7 //
+    {path : 'step7' ,  component : Stept7Component},
+    
   {path : 'step8' ,  component : Step8Component} ,
   {path : 'product' ,  component : Product1Component} ,
-  {path : 'product2' ,  component : Product2Component} ,
+  {path: 'aa' , component : Step7Component} ,
+  {path : 'product9' ,  component : Step9Component} ,
 
   
   {path : '' , redirectTo : 'step1' , pathMatch : 'full'} ,

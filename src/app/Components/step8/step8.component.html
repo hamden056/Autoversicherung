@@ -1,139 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happysurance</title>
-    <link rel="stylesheet" href="step8.component.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/51b7a6e7c5.js" crossorigin="anonymous"></script>
 
 
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid menu">
-          <a class="navbar-brand" href="#"><img class="img-fluid" style="width: 120px;" src="https://scontent-dus1-1.xx.fbcdn.net/v/t39.30808-6/328314369_1563698824151515_5706705008494247183_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=2vAlRsOqFdkAX_Bsh-h&_nc_ht=scontent-dus1-1.xx&oh=00_AfDXaqOqkx2y7G68eSJmfpA0rrJr2CPE0-WsyaamtUi9kw&oe=63E8A0C6"  alt=""></a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-6 my-5">
-               <h1 class="text-center">Deine Minikasko-Versicherung</h1>
-            </div>
-        </div>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/><link rel="preload" href="/_next/static/css/2222ca5c10f3bf19.css" as="style"/>
+<link rel="stylesheet" href="/_next/static/css/2222ca5c10f3bf19.css" data-n-g=""/><noscript data-n-css=""></noscript>
+<script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-6ef43a8d4a395f49.js" defer=""></script>
+
+<script src="/_next/static/chunks/framework-7751730b10fa0f74.js" defer=""></script><script src="/_next/static/chunks/main-98b6294b0f6c12ee.js" defer=""></script>
+
+<script src="/_next/static/chunks/pages/_app-8f3d59c35bc8cd51.js" defer=""></script><script src="/_next/static/chunks/593-a97fb75977ecd1d8.js" defer=""></script>
+<script src="/_next/static/chunks/410-ae3cf97cd52683e3.js" defer=""></script><script src="/_next/static/chunks/pages/step8-2a3c4117ff0bfeae.js" defer=""></script><script src="/_next/static/Wp3enNHQLejOtpfIMNFgF/_buildManifest.js" defer=""></script><script src="/_next/static/Wp3enNHQLejOtpfIMNFgF/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="h-full w-full absolute">
+    
+    
+    <nav class="bg-white w-full flex relative justify-between items-center mx-auto px-8 h-20 sticky top-0 border-b-2 z-10"><div class="inline-flex"><div class="_o6689fn" href="/"><div class="hidden md:block"><img width="120" class="img-fluid" style="margin-left: 30px;" src="https://happy-surance.de/wp-content/uploads/2021/05/Unbenannt-2.png"/></div><div class="block md:hidden"></div></div></div></nav>
+  
+    
+    <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="container mx-auto px-6"><div class="flex w-full min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8"><div class="w-full max-w-md space-y-8"><div class="w-full max-w-md space-y-8"><style>
+    #nprogress {
+      pointer-events: none;
+    }
+    #nprogress .bar {
+      background: #FF8A4C;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+    }
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px #FF8A4C, 0 0 5px #FF8A4C;
+      opacity: 1;
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+      transform: rotate(3deg) translate(0px, -4px);
+    }
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+      border: solid 2px transparent;
+      border-top-color: #FF8A4C;
+      border-left-color: #FF8A4C;
+      border-radius: 50%;
+      -webkit-animation: nprogresss-spinner 400ms linear infinite;
+      animation: nprogress-spinner 400ms linear infinite;
+    }
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+    @-webkit-keyframes nprogress-spinner {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @keyframes nprogress-spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style><div><h1 class="text-2xl leading-normal mt-0 mb-2 text-center font-bold">Deine Minikasko-Versicherung</h1><br/>
+    
+    <div class="block text-center p-6 bg-white rounded-lg border border-gray-30 shadow-md dark:bg-gray-80 dark:border-gray-70 dark:hover:bg-gray-70">
+      
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-90 dark:text-white">Antragsunterlagen</h5>
+     <p class="font-normal text-gray-700 dark:text-gray-40">Wir sind dazu verpflichtet, Ihnen vor Antragstellung alle wichtigen Dokumente zu Ihrem Versicherungsantrag zur Verfügung zu stellen. Den vollständigen Inhalt finden Sie hier.</p>
+     <br/>
     </div>
-   <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-6">
-            <div class="card shadow ">
-              <div class="card-body justify-content-center rounded p-5">
-                <h3 class="text-center my-5">Antragsunterlagen</h3>
-                <p class="text-center">Wir sind dazu verpflichtet, ihnen vor Antragstellung alle wichtigen Documente zu ihrem Versicherungsantrag zur Verfügung zu stellen. Den vollständigen inhalt finden Sie hier</p>
-                <div class="versicherung justify-content-center d-flex">
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                    <h5> Deine Versicherung</h5>
-                  </div>
-              </div>
-            </div>
-            <div class="card shadow my-5">
-                <div class="card-body justify-content-center rounded p-5">
-                  <h3 class="text-center my-5">Gesetzliche Hinweise und Einnwillingungen</h3>
-                  <div class="versicherung d-flex">
-                        <div class="form-check ">
-                            <input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckIndeterminate">
-                            <label class="form-check-label" for="flexCheckIndeterminate">
-                            </label>
-                        </div>
-                        <p> Ich habe die Versicherungsbedingungen und das Produktinformationsblatt der Minikasko zur Kenntnis genommen.</p>
-                  </div>
-                  <div class="versicherung d-flex">
-                    <div class="form-check ">
-                        <input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckIndeterminate">
-                        <label class="form-check-label" for="flexCheckIndeterminate">
-                        </label>
-                    </div>
-                    <p> Ich habe den Datenschutzhinweis und die Werbeeinwillingung des Vermittlers HappySurance zur Kenntnis genommen.</p>
-              </div>
-              </div>
-                </div>
-              </div>
+  
+    <br/>
+      
+      <div class="block p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <h5 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> Gesetzliche Hinweise und Einwilligungen</h5>
+      <fieldset class="space-y-5"><legend class="sr-only">Notifications</legend><div class="relative flex items-start"><div class="flex h-5 items-center">
+        
+        <input id="comments" aria-describedby="comments-description" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/></div>
+  
+        <div class="ml-3 text-sm"><p id="comments-description" class="text-gray-500">
+  
+        Ich habe die Versicherungsbedingungen und das Produktinformationsblatt der Minikasko zur Kenntnis genommen.</p></div></div>
+        
+        <div class="relative flex items-start"><div class="flex h-5 items-center"><input id="candidates" aria-describedby="candidates-description" name="candidates" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/></div>
+        
+        <div class="ml-3 text-sm"><p id="candidates-description" 
+          class="text-gray-500">Ich habe den Datenschutzhinweis und die Werbeeinwilligung des Vermittlers HappySurance zur Kenntnis genommen.</p></div>
+        
         </div>
+      </fieldset>
     </div>
     
-    <div class="container">
-        <div class="row text-center justify-content-center py-5">
-            <div class="col-lg-6 col-md-6 col-sm-3  d-flex justify-content-between">
-                <button class ="top-btn" [routerLink]="['/step7']">Zurück</button>
-                <button class ="top-btn top-btn2" (click)="sendData()"  >Vetrag <br> Kostenpflichtig <br> abschließen</button>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-4 col-md-4">
-                <!-- Button trigger modal -->
-                <button type="button" class="f-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <div class="f-btn d-flex">
-                        <i class="fa-regular fa-floppy-disk fs-5"></i>
+    <br/>
+    <br/>
+  
+  </div>
+  </div>
+  
+  
+  <button style="border: 1px solid black; width: 100px; height: 50px; float: left; margin-top: 10px;" class="top-btn" [routerLink]="['/step7']">Zurück</button>
+  <span style="clear: both;"></span>
+  <button style="background-color: #f0906a; transition: background-color 0.5s ease; width: 150px; margin-bottom: 100px; border-radius: 6px; float: right;" class="top-btn top-btn2" (click)="sendData()">Vetrag <br> Kostenpflichtig <br> abschließen
+    
+  </button>
+  
+  
+  <div class="w-full max-w-md space-y-8 text-center"><button class="button items-center inline-flex text-orange-400 font-bold">
+   </button>
+  </div>
+  </div>
+  </div>
+            <footer class="bg-white"><div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
+              
+              <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer"><div class="px-5 py-2"><a href="#" class="text-base text-gray-500 hover:text-gray-900">Kontakt</a>
+  
+              </div>
+              
+              <div class="px-5 py-2"><a href="#" class="text-base text-gray-500 hover:text-gray-900">AGB</a></div>
+              
+              <div class="px-5 py-2"><a href="#" class="text-base text-gray-500 hover:text-gray-900">Datenschutzerklärung</a></div><div class="px-5 py-2">
                 
-                    </div>
-                </button>
-    
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="icon">
-                            <i class="fa-regular fa-floppy-disk"></i>
-                        </div>
-                        <div class="modal-header">
-                            
-                         
-                            
-                        </div>
-                        <div class="modal-body">
-                        <p>Bitte gib hier deine E-Mail an. Dann bekommst du deinen Antrag als link zugesendet und kannst jederzeit weiter machen.
-                        </p>
-                        <input type="email" class="shadow-none form-control" placeholder="you@example.com">
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abrechen</button>
-                        <button type="button" class="btn btn-primary">Spreichen</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                  
-            </div>
-        </div>
-    </div>
-    <section>
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-6 col-md-6 link">
-                    <div class="link d-flex justify-content-center">
-                        <a href="#">kontakt</a>
-                        <a href="#">ABG</a>
-                        <a href="#">Datenschutzerklärung</a>
-                        <a href="#">Impressum</a>
-                    </div>
-                    <p>Copyright @2023 HappySurance</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script>
-    
-    </script>
-    </body>
-    </html>
-    
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900">Impressum</a></div></nav>
+                
+                <p class="mt-8 text-center text-base text-gray-400">© 2020 HappySurrance. All rights reserved.</p>
+              
+              </div></footer></div></div></div>
+              
+     
+         
+            
+            
+            </body>
+            
+            </html>
+  
+  
+  

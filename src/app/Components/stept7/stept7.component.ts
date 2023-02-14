@@ -1,3 +1,5 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { lp } from 'src/app/lp';
@@ -5,12 +7,11 @@ import { Mata } from 'src/Mata';
 
 
 @Component({
-  selector: 'app-step7',
-  templateUrl: './step7.component.html',
-  styleUrls: ['./step7.component.css']
+  selector: 'app-stept7',
+  templateUrl: './stept7.component.html',
+  styleUrls: ['./stept7.component.css']
 })
-export class Step7Component implements OnInit {
-
+export class Stept7Component implements OnInit {
   pl : lp = new lp() ;
 
   inputValues = ['', '', ''];
@@ -29,9 +30,12 @@ gotoPage8(){
     console.log(this.receivedData) ;
     }
 
+    
+
 
 
 ngOnInit(): void {
+
 
   let date  = new Date () ; 
   this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
@@ -41,7 +45,8 @@ ngOnInit(): void {
       this.receivedData = history.state.mata as Mata  ;   
       console.log('receivedData' , this.receivedData) ; 
     }
-    window.scrollTo(0, 0);
+
+    window.scrollTo(0, 0);  
 
   }
 
@@ -54,7 +59,6 @@ ngOnInit(): void {
   this.router.navigateByUrl('/step3' , {state : {mata : this.receivedData}})
     }
   }
-   
   setData(){
     this.receivedData.versicherungsbeginn = this.mata.versicherungsbeginn  ;
     this.receivedData.hauptfaelligkeit = this.mata.hauptfaelligkeit  ;
@@ -63,3 +67,5 @@ ngOnInit(): void {
   }
 
 }
+
+

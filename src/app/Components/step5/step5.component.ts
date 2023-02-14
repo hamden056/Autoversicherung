@@ -22,10 +22,6 @@ export class Step5Component implements OnInit {
 
   constructor(private router : Router) { }
 
- gotoPage6() {
-  
- this.router.navigateByUrl('/step6' , {state : {mata : this.receivedData}})
- }
 
 
  inputValue!: string;
@@ -53,12 +49,13 @@ export class Step5Component implements OnInit {
 
  ngOnInit(): void {
   let date  = new Date () ; 
-  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+  this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'' ,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
   )  ; 
   if (history.state.mata){
           this.receivedData = history.state.mata as Mata  ;   
       console.log('receivedData' , this.receivedData) ; 
     }
+     window.scrollTo(0, 0);
   
   }
 

@@ -107,7 +107,7 @@ selectedCard !: number;
   
    ngOnInit(): void {
     let date  = new Date () ; 
-    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,this.pl,''  ,'' ,'' ,date,'' ,'' ,'','' ,''
+    this.mata = new Mata ('','','','',date,'','',date ,'' ,'' ,'' ,'',''  ,'' ,'' ,date,'' ,'' ,'','' ,''
     )  ; 
     if (history.state.mata){
       this.receivedData = history.state.mata as Mata  ; 

@@ -1,16 +1,19 @@
+
+
+import { Customer } from 'src/app/Moduls/customer';
+import { lp } from 'src/app/lp';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { FormControl, Validators } from '@angular/forms';
-
-
-
-
+import { CustomerData } from 'src/app/Moduls/customer-data';
+import { InsuranceData } from 'src/app/Moduls/insurance-data';
+import { Mata } from 'src/Mata';
 @Component({
   selector: 'app-step9',
   templateUrl: './step9.component.html',
   styleUrls: ['./step9.component.css']
 })
-export class Step9Component implements OnInit {
+export class Step9Component  {
 
   email!: string;
   valid!: boolean;
@@ -48,11 +51,6 @@ export class Step9Component implements OnInit {
     // Perform submit logic
   }
 
+
+ }
   
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}

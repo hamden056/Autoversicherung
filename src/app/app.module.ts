@@ -17,6 +17,9 @@ import { Product1Component } from './Components/product1/product1.component';
 import { Product2Component } from './Components/product2/product2.component';
 import { Product3Component } from './Components/product3/product3.component';
 import { Step9Component } from './Components/step9/step9.component';
+import { Stept7Component } from './Components/stept7/stept7.component';
+import { Stept1Component } from './Components/stept1/stept1.component';
+
 
 
 
@@ -24,7 +27,6 @@ import { Step9Component } from './Components/step9/step9.component';
   declarations: [
     AppComponent,
     Step1Component,
-
     Step3Component,
     Step4Component,
     Step5Component,
@@ -36,8 +38,9 @@ import { Step9Component } from './Components/step9/step9.component';
     Product1Component,
     Product2Component,
     Product3Component,
-    Step9Component
- 
+    Step9Component,
+    Stept7Component,
+    Stept1Component 
 
   ],
   imports: [
