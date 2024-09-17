@@ -13,20 +13,22 @@ import { Product1Component } from './Components/product1/product1.component';
 import { Product2Component } from './Components/product2/product2.component';
 import { Step9Component } from './Components/step9/step9.component';
 import { Stept7Component } from './Components/stept7/stept7.component';
+import { LoginComponent } from './Components/auth/login/login.component';
+import { LogoutComponent } from './Components/auth/logout/logout.component';  // Create this component
+import { AuthGuard } from './Components/auth/guards/guard.guard';  // Adjust the path to where the guard is located
 
 
 const routes: Routes = [
-
-  {path : 'step1' , component : Step1Component},
+  { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'step1', component: Step1Component, canActivate: [AuthGuard] },  // Protect this route
   {path : 'step1/volkasko' , component : VolkasoComponent},
-  {path : 'step2' ,  component : Step2Component} ,
+  {path : 'step2' ,  component : Step2Component, canActivate: [AuthGuard]} ,
   {path : 'step3' ,  component : Step3Component} ,
   {path : 'step4' ,  component : Step4Component} ,
   {path : 'step5' ,  component : Step5Component} ,
-    {path : 'step6' ,  component : Step6Component},
-    // eyyyak ntesti step7 //
-    {path : 'step7' ,  component : Stept7Component},
-    
+  {path : 'step6' ,  component : Step6Component},
+  {path : 'step7' ,  component : Stept7Component}, 
   {path : 'step8' ,  component : Step8Component} ,
   {path : 'product' ,  component : Product1Component} ,
   {path: 'aa' , component : Step7Component} ,

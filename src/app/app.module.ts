@@ -19,6 +19,11 @@ import { Product3Component } from './Components/product3/product3.component';
 import { Step9Component } from './Components/step9/step9.component';
 import { Stept7Component } from './Components/stept7/stept7.component';
 import { Stept1Component } from './Components/stept1/stept1.component';
+import { LoginComponent } from './Components/auth/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './Components//auth/logout/logout.component';
+import { AuthGuard } from './Components/auth/guards/guard.guard';
+
 
 
 
@@ -40,14 +45,16 @@ import { Stept1Component } from './Components/stept1/stept1.component';
     Product3Component,
     Step9Component,
     Stept7Component,
-    Stept1Component 
-
+    Stept1Component,
+    LoginComponent,
+    LogoutComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule  ,
     FormsModule ,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
